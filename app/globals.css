@@ -1,23 +1,24 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-brand-dark: #60042B;
+/* Scan all component files to ensure Tailwind generates all utility classes */
+@source "../components/**/*.{tsx,ts,jsx,js}";
+
+@theme {
+  --color-brand-dark: #60042b;
   --color-brand: #9e3a5b;
   --color-brand-light: #c4607f;
-  --color-white: #FFFFFF;
+  --color-white: #ffffff;
   --color-gray-dark: #333333;
-  --color-gray-light: #F1F1F1;
+  --color-gray-light: #f1f1f1;
   --color-black: #000000;
 
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Reset & Base */
+/* Reset */
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -28,7 +29,31 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-gray-dark);
-  background-color: var(--color-white);
+  background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reliable container utility used across all sections */
+.section-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (min-width: 640px) {
+  .section-wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-wrapper {
+    padding-left: 64px;
+    padding-right: 64px;
+  }
 }
