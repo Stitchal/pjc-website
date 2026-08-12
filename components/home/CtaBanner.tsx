@@ -6,9 +6,10 @@ export default function CtaBanner() {
       <div className="section-wrapper">
         <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8 sm:p-12 text-center">
           <p className="text-lg text-gray-dark leading-relaxed max-w-xl mx-auto">
-            Un projet en tête ? Nos{" "}
-            <strong className="font-bold text-brand-dark">équipes</strong> sont à votre
-            écoute pour vous accompagner
+            Un projet en tête ? Nos équipes sont à votre écoute pour{" "}
+            <strong className="font-bold text-brand-dark">
+              vous accompagner
+            </strong>
           </p>
 
           <div className="mt-7">
