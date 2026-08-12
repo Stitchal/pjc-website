@@ -13,8 +13,8 @@ export default function PartnersSection() {
   return (
     <section className="bg-white border-t border-gray-200 py-12">
       <div className="section-wrapper">
-        <h2 className="text-lg font-bold text-gray-dark">
-          Ils nous soutiennent
+        <h2 className="text-2xl font-bold text-gray-dark">
+          Ils nous font confiance
         </h2>
 
         <div className="mt-8 flex flex-wrap items-center gap-12">
