@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden text-white min-h-[480px] flex items-center"
+      className="relative overflow-hidden text-white min-h-[calc(100vh-68px)] min-h-[calc(100dvh-68px)] flex items-center"
       style={{
         background: "linear-gradient(120deg, var(--color-brand-dark) 0%, var(--color-brand-mid) 50%, var(--color-brand-deep) 100%)",
       }}
@@ -22,9 +22,10 @@ export default function HeroSection() {
         <div className="max-w-2xl">
           <h1 className="font-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl">
             Palm Junior Conseil
-            <span className="font-normal">, une Junior spécialisée dans </span>
-            les Industries Culturelles et Créatives
           </h1>
+          <h2 className="font-normal leading-tight text-xl sm:text-2xl md:text-3xl">
+            La Junior-Conseil spécialisée dans les Industries Culturelles et Créatives
+          </h2>
 
           <div className="mt-10">
             <Link
