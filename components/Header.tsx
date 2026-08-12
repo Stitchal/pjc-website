@@ -16,74 +16,38 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header
-      style={{
-        position: "sticky",
-        top: 0,
-        zIndex: 50,
-        backgroundColor: "rgba(255,255,255,0.97)",
-        backdropFilter: "blur(8px)",
-        borderBottom: "1px solid #e5e7eb",
-        boxShadow: "0 1px 4px rgba(0,0,0,0.06)",
-      }}
-    >
-      <div className="section-wrapper" style={{ paddingTop: 0, paddingBottom: 0 }}>
-        <div
-          style={{
-            display: "flex",
-            height: "68px",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-xs">
+      <div className="section-wrapper py-0">
+        <div className="flex h-[68px] items-center justify-between">
           {/* Logo */}
           <Link
             href="/"
-            style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none" }}
+            className="flex items-center gap-2 no-underline"
             onClick={() => setMobileMenuOpen(false)}
           >
-            <span
-              style={{
-                display: "flex",
-                height: "36px",
-                width: "36px",
-                alignItems: "center",
-                justifyContent: "center",
-                borderRadius: "10px",
-                backgroundColor: "#60042b",
-                color: "#ffffff",
-                fontSize: "0.8125rem",
-                fontWeight: 700,
-              }}
-            >
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-brand-dark text-white text-sm font-bold">
               P
             </span>
-            <span style={{ fontSize: "0.9375rem", fontWeight: 700, color: "#60042b", lineHeight: 1.2 }}>
+            <span className="text-sm font-bold text-brand-dark leading-tight">
               Palm Junior
               <br />
-              <span style={{ fontSize: "0.6875rem", fontWeight: 600, color: "#9e3a5b" }}>Conseil</span>
+              <span className="text-xs font-semibold text-brand">Conseil</span>
             </span>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }} className="desktop-nav">
+          <nav className="desktop-nav flex items-center gap-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  style={{
-                    position: "relative",
-                    padding: "0.5rem 1rem",
-                    borderRadius: "0.5rem",
-                    fontSize: "0.875rem",
-                    fontWeight: 500,
-                    color: isActive ? "#60042b" : "#333333",
-                    backgroundColor: isActive ? "rgba(96,4,43,0.06)" : "transparent",
-                    textDecoration: "none",
-                    transition: "all 0.2s",
-                  }}
+                  className={`relative px-4 py-2 rounded-lg text-sm font-medium no-underline transition-all ${
+                    isActive
+                      ? "text-brand-dark bg-brand-dark/10"
+                      : "text-gray-dark hover:text-brand-dark hover:bg-gray-100"
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -95,19 +59,7 @@ export default function Header() {
           <div className="desktop-nav">
             <Link
               href="/nous-contacter"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                borderRadius: "0.75rem",
-                backgroundColor: "#60042b",
-                padding: "0.625rem 1.25rem",
-                fontSize: "0.875rem",
-                fontWeight: 600,
-                color: "#ffffff",
-                textDecoration: "none",
-                transition: "background-color 0.2s",
-              }}
+              className="inline-flex items-center gap-2 rounded-xl bg-brand-dark px-5 py-2.5 text-sm font-semibold text-white no-underline transition-colors hover:bg-brand-dark/90"
             >
               Contactez-nous
             </Link>
@@ -116,21 +68,9 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="mobile-menu-btn"
+            className="mobile-menu-btn hidden items-center justify-center h-10 w-10 rounded-lg border-none bg-transparent cursor-pointer text-gray-dark"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-            style={{
-              display: "none",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "40px",
-              width: "40px",
-              borderRadius: "0.5rem",
-              border: "none",
-              backgroundColor: "transparent",
-              cursor: "pointer",
-              color: "#333333",
-            }}
           >
             {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -139,8 +79,8 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div style={{ borderTop: "1px solid #e5e7eb", backgroundColor: "#ffffff", padding: "1rem" }}>
-          <nav style={{ display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+        <div className="border-t border-gray-200 bg-white p-4">
+          <nav className="flex flex-col gap-1">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -148,37 +88,21 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  style={{
-                    display: "block",
-                    borderRadius: "0.75rem",
-                    padding: "0.75rem 1rem",
-                    fontSize: "0.875rem",
-                    fontWeight: 500,
-                    color: isActive ? "#60042b" : "#333333",
-                    backgroundColor: isActive ? "rgba(96,4,43,0.06)" : "transparent",
-                    textDecoration: "none",
-                  }}
+                  className={`block rounded-xl px-4 py-3 text-sm font-medium no-underline ${
+                    isActive
+                      ? "text-brand-dark bg-brand-dark/10"
+                      : "text-gray-dark hover:bg-gray-50"
+                  }`}
                 >
                   {link.label}
                 </Link>
               );
             })}
-            <div style={{ paddingTop: "0.5rem" }}>
+            <div className="pt-2">
               <Link
                 href="/nous-contacter"
                 onClick={() => setMobileMenuOpen(false)}
-                style={{
-                  display: "block",
-                  width: "100%",
-                  borderRadius: "0.75rem",
-                  backgroundColor: "#60042b",
-                  padding: "0.75rem 1rem",
-                  textAlign: "center",
-                  fontSize: "0.875rem",
-                  fontWeight: 600,
-                  color: "#ffffff",
-                  textDecoration: "none",
-                }}
+                className="block w-full rounded-xl bg-brand-dark px-4 py-3 text-center text-sm font-semibold text-white no-underline"
               >
                 Contactez-nous
               </Link>
@@ -196,3 +120,4 @@ export default function Header() {
     </header>
   );
 }
+

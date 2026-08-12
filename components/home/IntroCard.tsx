@@ -1,43 +1,21 @@
 export default function IntroCard() {
   return (
-    <section style={{ backgroundColor: "#f1f1f1", padding: "4rem 0" }}>
+    <section className="bg-gray-light py-16">
       <div className="section-wrapper">
-        <div
-          style={{
-            overflow: "hidden",
-            borderRadius: "1rem",
-            backgroundColor: "#ffffff",
-            boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-            display: "grid",
-            gridTemplateColumns: "1fr",
-          }}
-        >
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-            }}
-            className="intro-grid"
-          >
+        <div className="overflow-hidden rounded-2xl bg-white shadow-md">
+          <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Text content */}
-            <div style={{ padding: "2.5rem 3rem", display: "flex", flexDirection: "column", justifyContent: "center" }}>
-              <h2
-                style={{
-                  fontSize: "1.5rem",
-                  fontWeight: 700,
-                  color: "#333333",
-                  lineHeight: 1.35,
-                }}
-              >
+            <div className="p-10 flex flex-col justify-center">
+              <h2 className="text-2xl font-bold text-gray-dark leading-snug">
                 Innovez au cœur des{" "}
-                <em style={{ fontStyle: "normal", color: "#60042b" }}>
+                <em className="not-italic text-brand-dark">
                   Industries Culturelles et Créatives
                 </em>
               </h2>
-              <p style={{ marginTop: "1rem", fontSize: "0.9375rem", color: "#4b5563", lineHeight: 1.7 }}>
+              <p className="mt-4 text-sm md:text-base text-gray-600 leading-relaxed">
                 Au cœur du campus Georges Méliès, écosystème entièrement dédié
                 aux industries culturelles et créatives,{" "}
-                <strong style={{ fontWeight: 600, color: "#333333" }}>
+                <strong className="font-semibold text-gray-dark">
                   Palm Junior Conseil
                 </strong>{" "}
                 est une association à but pédagogique qui met la créativité de
@@ -46,30 +24,15 @@ export default function IntroCard() {
             </div>
 
             {/* Photo placeholder */}
-            <div
-              style={{
-                backgroundColor: "#e5e7eb",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                minHeight: "280px",
-              }}
-            >
-              <span style={{ fontSize: "0.875rem", color: "#9ca3af", fontStyle: "italic" }}>
+            <div className="bg-gray-200 flex items-center justify-center min-h-[280px]">
+              <span className="text-sm text-gray-400 italic">
                 photo mandat
               </span>
             </div>
           </div>
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 768px) {
-          .intro-grid {
-            grid-template-columns: 1fr !important;
-          }
-        }
-      `}</style>
     </section>
   );
 }
+

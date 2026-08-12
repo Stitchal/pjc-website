@@ -11,41 +11,25 @@ const partners = [
 
 export default function PartnersSection() {
   return (
-    <section style={{ backgroundColor: "#ffffff", borderTop: "1px solid #e5e7eb", padding: "3rem 0" }}>
+    <section className="bg-white border-t border-gray-200 py-12">
       <div className="section-wrapper">
-        <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#333333" }}>
+        <h2 className="text-lg font-bold text-gray-dark">
           Ils nous soutiennent
         </h2>
 
-        <div
-          style={{
-            marginTop: "2rem",
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            gap: "3rem",
-          }}
-        >
+        <div className="mt-8 flex flex-wrap items-center gap-12">
           {partners.map((partner) => (
             <div
               key={partner.name}
               title={partner.name}
-              style={{ opacity: 0.6, filter: "grayscale(100%)", transition: "all 0.3s" }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.opacity = "1";
-                (e.currentTarget as HTMLElement).style.filter = "grayscale(0%)";
-              }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.opacity = "0.6";
-                (e.currentTarget as HTMLElement).style.filter = "grayscale(100%)";
-              }}
+              className="opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
               <Image
                 src={partner.src}
                 alt={partner.name}
                 width={partner.width}
                 height={partner.height}
-                style={{ height: "48px", width: "auto", objectFit: "contain" }}
+                className="h-12 w-auto object-contain"
               />
             </div>
           ))}
@@ -54,3 +38,4 @@ export default function PartnersSection() {
     </section>
   );
 }
+

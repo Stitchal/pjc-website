@@ -2,39 +2,19 @@ import Link from "next/link";
 
 export default function CtaBanner() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "3rem 0" }}>
+    <section className="bg-white py-12">
       <div className="section-wrapper">
-        <div
-          style={{
-            borderRadius: "1.25rem",
-            backgroundColor: "#f9fafb",
-            border: "1px solid #e5e7eb",
-            padding: "3rem 2rem",
-            textAlign: "center",
-          }}
-        >
-          <p style={{ fontSize: "1.1875rem", color: "#333333", lineHeight: 1.55, maxWidth: "540px", margin: "0 auto" }}>
+        <div className="rounded-2xl bg-gray-50 border border-gray-200 p-8 sm:p-12 text-center">
+          <p className="text-lg text-gray-dark leading-relaxed max-w-xl mx-auto">
             Un projet en tête ? Nos{" "}
-            <strong style={{ fontWeight: 700 }}>équipes</strong>, sont à votre
+            <strong className="font-bold text-brand-dark">équipes</strong> sont à votre
             écoute pour vous accompagner
           </p>
 
-          <div style={{ marginTop: "1.75rem" }}>
+          <div className="mt-7">
             <Link
               href="/nous-contacter"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                borderRadius: "9999px",
-                border: "2px solid #60042b",
-                padding: "0.75rem 1.75rem",
-                fontSize: "0.875rem",
-                fontWeight: 600,
-                color: "#60042b",
-                textDecoration: "none",
-                transition: "all 0.3s",
-              }}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-brand-dark px-7 py-3 text-sm font-semibold text-brand-dark no-underline transition-all hover:bg-brand-dark hover:text-white"
             >
               Contactez-nous
               <span>→</span>
@@ -45,3 +25,4 @@ export default function CtaBanner() {
     </section>
   );
 }
+
