@@ -3,12 +3,9 @@ import Link from "next/link";
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden text-white"
+      className="relative overflow-hidden text-white min-h-[480px] flex items-center"
       style={{
-        background: "linear-gradient(120deg, #60042b 0%, #7a1540 50%, #3d0018 100%)",
-        minHeight: "480px",
-        display: "flex",
-        alignItems: "center",
+        background: "linear-gradient(120deg, var(--color-brand-dark) 0%, var(--color-brand-mid) 50%, var(--color-brand-deep) 100%)",
       }}
     >
       {/* Subtle texture overlay */}
@@ -21,34 +18,18 @@ export default function HeroSection() {
       />
 
       {/* Content */}
-      <div className="section-wrapper relative" style={{ zIndex: 10, paddingTop: "5rem", paddingBottom: "6rem" }}>
-        <div style={{ maxWidth: "600px" }}>
-          <h1
-            className="font-bold leading-tight tracking-tight"
-            style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
-          >
+      <div className="section-wrapper relative z-10 pt-20 pb-24">
+        <div className="max-w-2xl">
+          <h1 className="font-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl">
             Palm Junior Conseil
-            <span style={{ fontWeight: 400 }}>, une Junior spécialisée dans </span>
+            <span className="font-normal">, une Junior spécialisée dans </span>
             les Industries Culturelles et Créatives
           </h1>
 
-          <div style={{ marginTop: "2.5rem" }}>
+          <div className="mt-10">
             <Link
               href="/plaquette"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                borderRadius: "9999px",
-                border: "2px solid white",
-                backgroundColor: "white",
-                padding: "0.75rem 1.75rem",
-                fontSize: "0.875rem",
-                fontWeight: 600,
-                color: "#60042b",
-                textDecoration: "none",
-                transition: "all 0.3s",
-              }}
+              className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-7 py-3 text-sm font-semibold text-brand-dark no-underline transition-all hover:bg-white/90"
             >
               Notre plaquette commerciale
             </Link>
@@ -57,17 +38,18 @@ export default function HeroSection() {
       </div>
 
       {/* Geometric diagonal cut — bottom */}
-      <div className="absolute bottom-0 left-0 right-0" style={{ zIndex: 5 }}>
+      <div className="absolute bottom-0 left-0 right-0 z-5">
         <svg
           viewBox="0 0 1440 80"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          style={{ display: "block", width: "100%", height: "auto" }}
+          className="block w-full h-auto"
           preserveAspectRatio="none"
         >
-          <path d="M0 80L1440 0V80H0Z" fill="#f1f1f1" />
+          <path d="M0 80L1440 0V80H0Z" className="fill-gray-light" />
         </svg>
       </div>
     </section>
   );
 }
+

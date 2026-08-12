@@ -7,3 +7,16 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+# Color Variables & Design System Rule
+
+- **Do NOT hardcode hex colors** (e.g. `#60042b`, `#9e3a5b`, `#333333`, `#ffffff`, `#f1f1f1`) in TSX components or CSS files.
+- **ALWAYS use Tailwind CSS theme classes** or **CSS variables** defined in `app/globals.css`:
+  - `bg-brand-dark`, `text-brand-dark`, `border-brand-dark` (for `#60042b` / `var(--color-brand-dark)`)
+  - `bg-brand`, `text-brand`, `border-brand` (for `#9e3a5b` / `var(--color-brand)`)
+  - `bg-brand-light`, `text-brand-light` (for `#c4607f` / `var(--color-brand-light)`)
+  - `text-gray-dark`, `bg-gray-dark` (for `#333333` / `var(--color-gray-dark)`)
+  - `bg-gray-light`, `text-gray-light` (for `#f1f1f1` / `var(--color-gray-light)`)
+  - `bg-white`, `text-white`, `border-white` (for `#ffffff` / `var(--color-white)`)
+- If using inline styles `style={{ ... }}`, use `var(--color-...)` instead of raw hex strings.
+

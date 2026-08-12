@@ -1,9 +1,7 @@
 "use client";
 
-
 import { Megaphone, Clapperboard, Gamepad2, PartyPopper, Search } from "lucide-react";
 import type { FC, SVGProps } from "react";
-
 
 type IconComponent = FC<SVGProps<SVGSVGElement> & { size?: number | string }>;
 
@@ -17,62 +15,29 @@ const services: { icon: IconComponent; title: string; description: string }[] = 
 
 export default function ServicesGrid() {
   return (
-    <section style={{ backgroundColor: "#ffffff", padding: "4rem 0" }}>
+    <section className="bg-white py-16">
       <div className="section-wrapper">
-        <h2 style={{ fontSize: "1.625rem", fontWeight: 700, color: "#333333" }}>
+        <h2 className="text-2xl font-bold text-gray-dark">
           Nos prestations
         </h2>
 
-        <div
-          style={{
-            marginTop: "2rem",
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1.25rem",
-          }}
-          className="services-grid"
-        >
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.title}
-                style={{
-                  borderRadius: "1rem",
-                  backgroundColor: "#ffffff",
-                  padding: "1.5rem",
-                  border: "1px solid #e5e7eb",
-                  transition: "box-shadow 0.3s, transform 0.3s",
-                }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(0,0,0,0.08)";
-                  (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
-                  (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-                }}
+                className="rounded-2xl bg-white p-6 border border-gray-200 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
               >
                 {/* Icon badge */}
-                <div
-                  style={{
-                    display: "flex",
-                    height: "2.75rem",
-                    width: "2.75rem",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    borderRadius: "0.75rem",
-                    backgroundColor: "#60042b",
-                    color: "#ffffff",
-                  }}
-                >
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-brand-dark text-white">
                   <Icon width={20} height={20} />
                 </div>
 
-                <h3 style={{ marginTop: "1rem", fontSize: "0.9375rem", fontWeight: 600, color: "#333333" }}>
+                <h3 className="mt-4 text-base font-semibold text-gray-dark">
                   {service.title}
                 </h3>
-                <p style={{ marginTop: "0.375rem", fontSize: "0.875rem", color: "#6b7280", lineHeight: 1.6 }}>
+                <p className="mt-1.5 text-sm text-gray-500 leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -80,15 +45,7 @@ export default function ServicesGrid() {
           })}
         </div>
       </div>
-
-      <style>{`
-        @media (max-width: 900px) {
-          .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
-        }
-        @media (max-width: 560px) {
-          .services-grid { grid-template-columns: 1fr !important; }
-        }
-      `}</style>
     </section>
   );
 }
+
