@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import ConditionalHeader from "@/components/ConditionalHeader";
 import Footer from "@/components/Footer";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -44,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="fr" className={`${plusJakartaSans.variable} antialiased`}>
       <body className="flex min-h-screen flex-col font-sans">
-        <Header />
+        <ConditionalHeader />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>
