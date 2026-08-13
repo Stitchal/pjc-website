@@ -9,7 +9,6 @@ import { Menu, X, Home } from "lucide-react";
 export const NAV_LINKS = [
   { href: "/notre-junior", label: "Notre Junior" },
   { href: "/nos-prestations", label: "Nos prestations" },
-  { href: "/nous-contacter", label: "Nous contacter" },
 ] as const;
 
 interface NavBarProps {
@@ -56,14 +55,11 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
           <Link
             href="/"
             aria-label="Accueil"
-            className="flex items-center justify-center rounded-full no-underline transition-colors"
-            style={{
-              width: "40px",
-              height: "40px",
-              backgroundColor: "var(--color-brand-dark)",
-              color: "#fff",
-              marginRight: "4px",
-            }}
+            className={`flex h-10 w-10 items-center justify-center rounded-full no-underline transition-all mr-1 ${
+              pathname === "/"
+                ? "bg-brand-dark text-white"
+                : "text-gray-dark hover:text-brand-dark hover:bg-gray-100"
+            }`}
           >
             <Home size={18} />
           </Link>
@@ -84,6 +80,17 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
               </Link>
             );
           })}
+
+          <Link
+            href="/nous-contacter"
+            className={`ml-1 px-5 py-2 rounded-full text-sm font-semibold text-white transition-all no-underline shadow-sm hover:shadow ${
+              pathname === "/nous-contacter"
+                ? "bg-brand ring-2 ring-brand/30"
+                : "bg-brand-dark hover:bg-brand"
+            }`}
+          >
+            Nous contacter
+          </Link>
         </nav>
 
         {/* Mobile hamburger */}
@@ -126,10 +133,9 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
               <Link
                 href="/nous-contacter"
                 onClick={() => setMobileOpen(false)}
-                className="block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold text-white no-underline"
-                style={{ backgroundColor: "var(--color-brand-dark)" }}
+                className="block w-full rounded-xl px-4 py-3 text-center text-sm font-semibold text-white bg-brand-dark hover:bg-brand transition-all no-underline shadow-sm"
               >
-                Contactez-nous
+                Nous contacter
               </Link>
             </div>
           </nav>
