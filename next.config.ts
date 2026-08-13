@@ -1,15 +1,15 @@
 import type { NextConfig } from "next";
 
-// NEXT_PUBLIC_BASE_PATH is injected by the CI workflow for GitHub Pages.
-// It is empty string in local dev so paths resolve against localhost.
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+// GITHUB_ACTIONS is automatically set to "true" in every GitHub Actions
+// runner — no manual configuration needed. Locally it is undefined.
+const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
+const basePath = isGitHubActions ? "/pjc-website" : "";
 
 const nextConfig: NextConfig = {
   // Static HTML export — required for GitHub Pages deployment.
   output: "export",
 
-  // Subpath of the GitHub Pages site (e.g. "/palm-junior-conseil").
-  // Empty in local dev, set via env var in CI.
+  // Prepended to all page routes AND next/image src attributes.
   basePath,
 
   // next/image optimisation is not available in static exports.
@@ -17,3 +17,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+
