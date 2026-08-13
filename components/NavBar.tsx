@@ -55,11 +55,10 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
           <Link
             href="/"
             aria-label="Accueil"
-            className={`flex h-10 w-10 items-center justify-center rounded-full no-underline transition-all mr-1 ${
-              pathname === "/"
+            className={`flex h-10 w-10 items-center justify-center rounded-full no-underline transition-all mr-1 ${pathname === "/"
                 ? "bg-brand-dark text-white"
                 : "text-gray-dark hover:text-brand-dark hover:bg-gray-100"
-            }`}
+              }`}
           >
             <Home size={18} />
           </Link>
@@ -70,11 +69,10 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-5 py-2 rounded-full text-sm font-semibold no-underline transition-all ${
-                  isActive
+                className={`px-5 py-2 rounded-full text-sm font-semibold no-underline transition-all ${isActive
                     ? "bg-brand-dark/10 text-brand-dark"
                     : "text-gray-dark hover:text-brand-dark hover:bg-gray-100"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
@@ -83,11 +81,10 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
 
           <Link
             href="/nous-contacter"
-            className={`ml-1 px-5 py-2 rounded-full text-sm font-semibold text-white transition-all no-underline shadow-sm hover:shadow ${
-              pathname === "/nous-contacter"
+            className={`ml-1 px-5 py-2 rounded-full text-sm font-semibold text-white transition-all no-underline shadow-sm hover:shadow ${pathname === "/nous-contacter"
                 ? "bg-brand ring-2 ring-brand/30"
                 : "bg-brand-dark hover:bg-brand"
-            }`}
+              }`}
           >
             Nous contacter
           </Link>
@@ -96,11 +93,10 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className={`flex lg:hidden items-center justify-center h-10 w-10 rounded-full border-none cursor-pointer ${
-            variant === "hero"
+          className={`flex lg:hidden items-center justify-center h-10 w-10 rounded-full border-none cursor-pointer ${variant === "hero"
               ? "bg-white/20 backdrop-blur text-white"
               : "bg-gray-100 text-gray-dark"
-          }`}
+            }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >
@@ -119,11 +115,10 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`block rounded-xl px-4 py-3 text-sm font-semibold no-underline transition-all ${
-                    isActive
+                  className={`block rounded-xl px-4 py-3 text-sm font-semibold no-underline transition-all ${isActive
                       ? "bg-brand-dark/10 text-brand-dark"
                       : "text-gray-dark hover:bg-gray-50"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
