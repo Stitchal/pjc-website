@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -8,22 +9,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Column 1 — Logo & Branding */}
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2 group">
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-brand-dark text-sm font-bold transition-transform duration-300 group-hover:scale-105">
-                P
-              </span>
-              <span className="text-lg font-bold tracking-tight leading-tight">
-                Palm Junior
-                <br />
-                <span className="text-xs font-semibold text-white/70">
-                  Conseil
-                </span>
-              </span>
+          <div>
+            <Link href="/" className="inline-block group">
+              <Image
+                src="/assets/logos/logo-blanc.png"
+                alt="Palm Junior Conseil"
+                width={280}
+                height={100}
+                className="h-24 sm:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
-            <p className="text-sm text-white/60 leading-relaxed max-w-xs">
-              Le talent de nos étudiants, au service de votre projet.
-            </p>
           </div>
 
           {/* Column 2 — Coordonnées */}
