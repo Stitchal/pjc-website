@@ -1,56 +1,70 @@
+import Image from "next/image";
 import Link from "next/link";
+import NavBar from "@/components/NavBar";
 
 export default function HeroSection() {
   return (
     <section
-      className="relative overflow-hidden text-white min-h-[calc(100vh-68px)] min-h-[calc(100dvh-68px)] flex items-center"
-      style={{
-        background: "linear-gradient(120deg, var(--color-brand-dark) 0%, var(--color-brand-mid) 50%, var(--color-brand-deep) 100%)",
-      }}
+      className="relative overflow-hidden text-white"
+      style={{ backgroundColor: "var(--color-brand-dark)", minHeight: "100svh" }}
     >
-      {/* Subtle texture overlay */}
+      {/* Background image — bottom-right, blended */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/assets/images/campus-hero.png"
+          alt="Campus Georges Méliès"
+          fill
+          priority
+          className="object-cover object-right-bottom"
+          style={{ opacity: 0.38 }}
+        />
+        {/* Left fade so text area stays clean */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(100deg, var(--color-brand-dark) 38%, transparent 72%)",
+          }}
+        />
+        {/* Subtle gradient overlay */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(120deg, var(--color-brand-dark) 0%, var(--color-brand-mid) 50%, var(--color-brand-deep) 100%)",
+            opacity: 0.45,
+          }}
+        />
+      </div>
+
+      {/* ── Embedded Navbar ── */}
+      <div className="relative z-50">
+        <NavBar variant="hero" />
+      </div>
+
+      {/* ── Hero content ── */}
       <div
-        className="absolute inset-0 opacity-5"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-        }}
-      />
-
-      {/* Content */}
-      <div className="section-wrapper relative z-10 pt-20 pb-24">
-        <div className="max-w-2xl">
-          <h1 className="font-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl">
-            Palm Junior Conseil
+        className="relative z-10 section-wrapper pb-32 pt-10 flex items-end"
+        style={{ minHeight: "calc(100svh - 96px)" }}
+      >
+        <div className="max-w-xl">
+          <h1 className="font-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl mb-4">
+            <span className="font-bold">Palm Junior Conseil,</span>{" "}
+            <span className="font-normal">une Junior spécialisée dans </span>
+            <span className="font-bold">les Industries Culturelles et Créatives</span>
           </h1>
-          <h2 className="font-normal leading-tight text-xl sm:text-2xl md:text-3xl">
-            La Junior-Conseil spécialisée dans les Industries Culturelles et Créatives
-          </h2>
 
-          <div className="mt-10">
+          <div className="mt-8">
             <Link
               href="/plaquette"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white bg-white px-7 py-3 text-sm font-semibold text-brand-dark no-underline transition-all hover:bg-white/90"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-bold no-underline transition-all hover:bg-white/90 hover:shadow-lg"
+              style={{ color: "var(--color-brand-dark)" }}
             >
               Notre plaquette commerciale
             </Link>
           </div>
         </div>
       </div>
-
-      {/* Geometric diagonal cut — bottom */}
-      <div className="absolute bottom-0 left-0 right-0 z-5">
-        <svg
-          viewBox="0 0 1440 80"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="block w-full h-auto"
-          preserveAspectRatio="none"
-        >
-          <path d="M0 80L1440 0V80H0Z" className="fill-gray-light" />
-        </svg>
-      </div>
     </section>
   );
 }
-
