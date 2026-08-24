@@ -37,8 +37,10 @@ export default function HeroSection() {
         <div className="max-w-2xl">
           <h1 className="font-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl mb-4">
             <span className="font-bold">Transformez vos idées</span>{" "}
-            <span className="font-normal">en réussites culturelles et créatives</span>{" "}
-            <span className="font-bold">grâce à l'expertise de Palm Junior Conseil</span>
+            <span className="font-normal">en réussites culturelles et créatives à </span>{" "}
+            <span className="font-bold">tarifs compétitifs</span>{" "}
+            <span className="font-normal">grâce à</span>{" "}
+            <span className="font-bold">Palm Junior Conseil</span>
           </h1>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
