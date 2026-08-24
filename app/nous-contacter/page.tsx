@@ -11,7 +11,7 @@ export default function NousContacterPage() {
     <>
       <div className="py-10">
         <div className="w-full section-wrapper py-0">
-          <div className="w-full grid lg:grid-cols-2 gap-0 rounded-none lg:rounded-3xl overflow-hidden shadow-xl">
+          <div className="w-full grid lg:grid-cols-2 gap-0 rounded-none lg:rounded-3xl overflow-hidden shadow-xl border border-gray-200">
 
             {/* ── Colonne gauche — brand dark ── */}
             <div
