@@ -110,7 +110,7 @@ export default function NotreJuniorPage() {
             </p>
             <div className="pt-2">
               <a
-                href="/Plaquette_PJC.pdf"
+                href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Plaquette_PJC.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-brand-dark px-6 py-3 text-sm font-bold text-brand-dark no-underline transition-all hover:bg-brand-dark hover:text-white"

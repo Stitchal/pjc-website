@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
   // Prepended to all page routes AND next/image src attributes.
   basePath,
 
+  // Expose basePath to client components via env var.
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
+
   // next/image optimisation is not available in static exports.
   images: { unoptimized: true },
 };
