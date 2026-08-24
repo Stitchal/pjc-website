@@ -32,7 +32,7 @@ export default function HeroSection() {
       {/* ── Hero content ── */}
       <div
         className="relative z-10 section-wrapper py-16 flex items-center"
-        style={{ minHeight: "calc(100svh - 96px)" }}
+        style={{ minHeight: "calc(100svh - 80px)" }}
       >
         <div className="max-w-2xl">
           <h1 className="font-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl mb-4">
