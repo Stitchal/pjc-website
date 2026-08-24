@@ -10,27 +10,27 @@ const steps = [
   {
     number: "01",
     title: "Prise de contact",
-    description: "Compréhension des besoins, objectifs et contraintes. Mise en place d'une compréhension mutuelle.",
+    description: "Compréhension des besoins, objectifs et contraintes.",
   },
   {
     number: "02",
-    title: "Construction d'une offre sur mesure",
-    description: "Analyse approfondie des besoins. Description des solutions proposées. Délais et estimation budgétaire.",
+    title: "Offre sur mesure",
+    description: "Analyse approfondie, solutions proposées, délais et budget.",
   },
   {
     number: "03",
     title: "Convention d'étude",
-    description: "Définition des termes et conditions du projet afin d'établir un cadre clair pour toutes les parties impliquées.",
+    description: "Cadre clair et conditions définies pour toutes les parties.",
   },
   {
     number: "04",
-    title: "Réalisation du projet",
-    description: "Sélection d'intervenant(s) compétent(s). Concrétisation des solutions convenues. Communication régulière avec le client.",
+    title: "Réalisation",
+    description: "Intervenant(s) sélectionné(s), communication régulière.",
   },
   {
     number: "05",
-    title: "Clôture et accompagnement",
-    description: "Suite à la remise du livrable, Palm Junior Conseil s'engage sur une période de garantie afin de vous assurer la qualité de notre prestation.",
+    title: "Clôture",
+    description: "Livrable remis, période de garantie qualité assurée.",
   },
 ];
 
@@ -123,40 +123,39 @@ export default function NotreJuniorPage() {
       </section>
 
       {/* ── Section 2 : Méthodologie ── */}
-      <section className="bg-gray-light py-16 lg:py-24">
+      <section className="bg-gray-light py-16 lg:py-20">
         <div className="section-wrapper">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-dark mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-dark mb-2">
             Notre méthodologie
           </h2>
           <p className="text-gray-dark/60 mb-12 max-w-xl">
             Un processus structuré pour transformer votre vision en résultat concret.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {steps.map((step) => (
-              <div
-                key={step.number}
-                className="relative bg-white rounded-2xl p-6 shadow-sm border border-gray-200 group hover:shadow-md transition-shadow"
-              >
-                <div
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white mb-4"
-                  style={{ backgroundColor: "var(--color-brand-dark)" }}
-                >
-                  {step.number}
-                </div>
-                <h3 className="font-bold text-gray-dark mb-2">{step.title}</h3>
-                <p className="text-sm text-gray-dark/60 leading-relaxed">{step.description}</p>
-              </div>
-            ))}
+          {/* Steps — horizontal scroll on mobile, row on desktop */}
+          <div className="relative">
+            {/* Connecting line — desktop only */}
+            <div
+              className="hidden lg:block absolute top-6 left-0 right-0 h-px"
+              style={{ backgroundColor: "var(--color-brand-dark)", opacity: 0.15 }}
+            />
 
-            {/* Suivi constant — full width */}
-            <div className="md:col-span-2 lg:col-span-3 rounded-2xl p-6 text-white text-center"
-              style={{ backgroundColor: "var(--color-brand-dark)" }}
-            >
-              <p className="text-base font-medium">
-                Un <strong>suivi constant</strong> est maintenu avec les chefs de projet, à travers des{" "}
-                <strong>points réguliers</strong>, afin de garantir le bon déroulement de la mission.
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+              {steps.map((step) => (
+                <div key={step.number} className="relative flex flex-col gap-3">
+                  {/* Number bubble */}
+                  <div
+                    className="relative z-10 h-12 w-12 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0"
+                    style={{ backgroundColor: "var(--color-brand-dark)" }}
+                  >
+                    {step.number}
+                  </div>
+                  <div>
+                    <p className="font-bold text-gray-dark text-sm mb-1">{step.title}</p>
+                    <p className="text-xs text-gray-dark/55 leading-relaxed">{step.description}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
