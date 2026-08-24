@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function NousContacterPage() {
   return (
-    <div className="min-h-[calc(100vh-80px)] flex items-center py-10">
+    <div className="py-10">
       <div className="w-full section-wrapper py-0">
         <div className="w-full grid lg:grid-cols-2 gap-0 rounded-none lg:rounded-3xl overflow-hidden shadow-xl">
 
