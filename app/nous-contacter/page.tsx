@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { MapPin, Envelope } from "@phosphor-icons/react/dist/ssr";
+import { MapPinIcon } from "@phosphor-icons/react/dist/ssr/MapPin";
+import { EnvelopeIcon } from "@phosphor-icons/react/dist/ssr/Envelope";
 
 export const metadata: Metadata = {
   title: "Nous contacter",
@@ -28,7 +29,7 @@ export default function NousContacterPage() {
             <div className="mt-12 space-y-6">
               <div className="flex items-start gap-4">
                 <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10">
-                  <MapPin size={18} weight="bold" className="text-white" />
+                  <MapPinIcon size={18} weight="bold" className="text-white" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-1">Adresse</p>
@@ -42,7 +43,7 @@ export default function NousContacterPage() {
 
               <div className="flex items-start gap-4">
                 <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10">
-                  <Envelope size={18} weight="bold" className="text-white" />
+                  <EnvelopeIcon size={18} weight="bold" className="text-white" />
                 </div>
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-1">Email</p>

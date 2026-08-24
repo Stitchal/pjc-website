@@ -17,7 +17,7 @@ export default function PartnersSection() {
           Ils nous font confiance
         </h2>
 
-        <div className="mt-8 flex flex-wrap items-center gap-12">
+        <div className="mt-8 flex flex-wrap items-center gap-14">
           {partners.map((partner) => (
             <div
               key={partner.name}
@@ -29,7 +29,7 @@ export default function PartnersSection() {
                 alt={partner.name}
                 width={partner.width}
                 height={partner.height}
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
             </div>
           ))}
