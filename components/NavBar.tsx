@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 export const NAV_LINKS = [
+  { href: "/", label: "Accueil" },
   { href: "/notre-structure", label: "Notre structure" },
   { href: "/nos-prestations", label: "Nos prestations" },
 ] as const;
