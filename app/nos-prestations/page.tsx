@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -88,7 +88,7 @@ export default function NosPrestation() {
           Découvrez nos <span className="text-brand-dark">prestations</span>
         </h1>
         <div className="flex justify-center mt-3">
-          <Image
+          <AppImage
             src="/assets/icons/title-underline-bordeaux.png"
             alt=""
             width={420}
@@ -116,7 +116,7 @@ export default function NosPrestation() {
 
                 {/* Image */}
                 <div className="relative rounded-2xl overflow-hidden aspect-[16/10] shadow-lg">
-                  <Image
+                  <AppImage
                     src={p.image}
                     alt={p.title}
                     fill
@@ -132,7 +132,7 @@ export default function NosPrestation() {
                       className="h-12 w-12 rounded-xl flex items-center justify-center shrink-0"
                       style={{ backgroundColor: p.dark ? "rgba(255,255,255,0.15)" : "var(--color-brand-dark)" }}
                     >
-                      <Image
+                      <AppImage
                         src={p.dark ? p.iconWhite : p.iconWhite}
                         alt=""
                         width={28}

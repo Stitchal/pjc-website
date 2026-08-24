@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
@@ -33,13 +33,13 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
           className="shrink-0 no-underline"
           onClick={() => setMobileOpen(false)}
         >
-          <Image
+          <AppImage
             src={isHero ? "/assets/logos/cropped-logo-blanc.png" : "/assets/logos/cropped-logo-couleurs.png"}
             alt="Palm Junior Conseil"
             width={2536}
             height={1754}
             className="h-12 w-auto object-contain"
-            priority
+            loading="eager"
           />
         </Link>
 

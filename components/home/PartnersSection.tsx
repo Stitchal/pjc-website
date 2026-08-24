@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 
 const partners = [
   { name: "Campus des Métiers et des Qualifications d'Excellence", src: "/assets/partners/cmqe.png", width: 160, height: 64 },
@@ -24,7 +24,7 @@ export default function PartnersSection() {
               title={partner.name}
               className="opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
             >
-              <Image
+              <AppImage
                 src={partner.src}
                 alt={partner.name}
                 width={partner.width}

@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
   // Prepended to all page routes AND next/image src attributes.
   basePath,
 
+  // Prepend basePath to all static assets (_next/static, public/).
+  assetPrefix: basePath,
+
   // Expose basePath to client components via env var.
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
