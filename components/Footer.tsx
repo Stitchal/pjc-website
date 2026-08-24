@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 import { MapPin, Mail } from "lucide-react";
 
 export default function Footer() {
@@ -11,7 +11,7 @@ export default function Footer() {
           {/* Column 1 — Logo & Branding */}
           <div>
             <Link href="/" className="inline-block group">
-              <Image
+              <AppImage
                 src="/assets/logos/logo-blanc.png"
                 alt="Palm Junior Conseil"
                 width={280}

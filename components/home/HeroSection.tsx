@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 import { motion, useReducedMotion } from "motion/react";
@@ -40,11 +40,11 @@ export default function HeroSection() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease }}
       >
-        <Image
+        <AppImage
           src="/assets/images/campus-hero.png"
           alt="Campus Georges Méliès"
           fill
-          priority
+          loading="eager"
           className="object-cover object-right-bottom"
           style={{ opacity: 0.75 }}
         />

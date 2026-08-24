@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import AppImage from "@/components/AppImage";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function NotreJuniorPage() {
             <span className="text-brand-dark">votre projet.</span>
           </h1>
           <div className="flex justify-center mt-3">
-            <Image
+            <AppImage
               src="/assets/icons/title-underline-bordeaux.png"
               alt=""
               width={420}
@@ -80,12 +80,12 @@ export default function NotreJuniorPage() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Photo */}
           <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
-            <Image
+            <AppImage
               src="/assets/images/photo-mandat.jpeg"
               alt="Membres de Palm Junior Conseil"
               fill
               className="object-cover object-top"
-              priority
+              loading="eager"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent" />
           </div>
@@ -173,7 +173,7 @@ export default function NotreJuniorPage() {
                 className="h-14 w-14 rounded-2xl flex items-center justify-center"
                 style={{ backgroundColor: "var(--color-brand-dark)" }}
               >
-                <Image
+                <AppImage
                   src={item.icon}
                   alt={item.title}
                   width={36}
