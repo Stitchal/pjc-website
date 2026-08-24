@@ -56,7 +56,7 @@ export default function Footer() {
             </h3>
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/palmjuniorconseil"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -71,7 +71,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/palmjuniorconseil"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
