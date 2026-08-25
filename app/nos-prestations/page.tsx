@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import AppImage from "@/components/AppImage";
-import Link from "next/link";
 import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {

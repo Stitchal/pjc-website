@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AppImage from "@/components/AppImage";
-import { MapPin, Mail } from "lucide-react";
+import { MapPinIcon } from "@phosphor-icons/react/dist/ssr/MapPin";
+import { EnvelopeSimpleIcon } from "@phosphor-icons/react/dist/ssr/EnvelopeSimple";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
 import { NAV_LINKS } from "@/lib/nav-links";
 
@@ -30,7 +31,7 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm text-white/60">
               <li className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-brand-light" />
+                <MapPinIcon className="h-4 w-4 mt-0.5 shrink-0 text-brand-light" />
                 <span>
                   Campus Georges Méliès,
                   <br />
@@ -44,7 +45,7 @@ export default function Footer() {
                   href="mailto:palmjuniorconseil@gmail.com"
                   className="flex items-center gap-2 transition-colors duration-200 hover:text-white"
                 >
-                  <Mail className="h-4 w-4 shrink-0 text-brand-light" />
+                  <EnvelopeSimpleIcon className="h-4 w-4 shrink-0 text-brand-light" />
                   palmjuniorconseil@gmail.com
                 </a>
               </li>
