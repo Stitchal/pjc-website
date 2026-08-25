@@ -4,6 +4,13 @@ import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
   title: "Nos prestations",
+  description:
+    "Découvrez les prestations de Palm Junior Conseil : communication, production audiovisuelle, game design, événementiel et étude de publics. Des étudiants spécialisés à votre service.",
+  openGraph: {
+    title: "Nos prestations | Palm Junior Conseil",
+    description:
+      "Communication, production audiovisuelle, game design, événementiel et étude de publics. Le talent de nos étudiants spécialisés dans les Industries Culturelles et Créatives, au service de vos projets.",
+  },
 };
 
 const prestations = [

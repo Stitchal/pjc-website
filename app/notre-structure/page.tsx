@@ -5,6 +5,13 @@ import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
   title: "Notre structure",
+  description:
+    "Découvrez Palm Junior Conseil, association étudiante loi 1901 basée sur le Campus Georges Méliès à Cannes, spécialisée dans les Industries Culturelles et Créatives. Notre équipe, notre méthodologie, nos atouts.",
+  openGraph: {
+    title: "Notre structure | Palm Junior Conseil",
+    description:
+      "Association étudiante spécialisée dans les Industries Culturelles et Créatives, basée sur le Campus Georges Méliès à Cannes. Découvrez notre équipe et notre méthodologie.",
+  },
 };
 
 const steps = [

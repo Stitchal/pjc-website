@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
+  description:
+    "Politique de confidentialité de Palm Junior Conseil : données collectées, finalité, durée de conservation et droits des utilisateurs conformément au RGPD.",
+  robots: { index: false },
 };
 
 const sections = [
