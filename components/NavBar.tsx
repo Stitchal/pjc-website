@@ -4,7 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import AppImage from "@/components/AppImage";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { ListIcon } from "@phosphor-icons/react/dist/ssr/List";
+import { XIcon } from "@phosphor-icons/react/dist/ssr/X";
 
 import { NAV_LINKS } from "@/lib/nav-links";
 export { NAV_LINKS };
@@ -88,7 +89,7 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Fermer le menu" : "Ouvrir le menu"}
         >
-          {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+          {mobileOpen ? <XIcon size={18} /> : <ListIcon size={18} />}
         </button>
       </div>
 
