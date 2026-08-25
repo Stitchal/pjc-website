@@ -103,17 +103,6 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
           }`}
         >
           <nav className="flex flex-col p-2">
-            <Link
-              href="/"
-              onClick={() => setMobileOpen(false)}
-              className={`block rounded-xl px-4 py-3 text-sm font-semibold no-underline transition-colors ${
-                pathname === "/"
-                  ? isHero ? "bg-white/20 text-white" : "bg-brand-dark/8 text-brand-dark"
-                  : isHero ? "text-white/80 hover:bg-white/10 hover:text-white" : "text-gray-dark hover:bg-gray-50"
-              }`}
-            >
-              Accueil
-            </Link>
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
