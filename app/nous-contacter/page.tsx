@@ -4,6 +4,13 @@ import { EnvelopeIcon } from "@phosphor-icons/react/dist/ssr/Envelope";
 
 export const metadata: Metadata = {
   title: "Nous contacter",
+  description:
+    "Contactez Palm Junior Conseil pour démarrer votre projet. Notre équipe basée sur le Campus Georges Méliès à Cannes vous répond rapidement.",
+  openGraph: {
+    title: "Nous contacter | Palm Junior Conseil",
+    description:
+      "Vous avez un projet dans les Industries Culturelles et Créatives ? Contactez Palm Junior Conseil, notre équipe vous répond rapidement.",
+  },
 };
 
 export default function NousContacterPage() {

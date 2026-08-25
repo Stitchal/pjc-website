@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
+  description:
+    "Mentions légales de Palm Junior Conseil : éditeur, hébergeur, propriété intellectuelle et informations de contact.",
+  robots: { index: false },
 };
 
 const sections = [
