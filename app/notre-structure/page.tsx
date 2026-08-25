@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AppImage from "@/components/AppImage";
 import Link from "next/link";
+import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
   title: "Notre structure",
@@ -54,10 +55,10 @@ export default function NotreJuniorPage() {
     <main>
 
       {/* ── Section 1 : Présentation ── */}
-      <section className="section-wrapper py-16 lg:py-24">
+      <section className="section-wrapper py-16">
         {/* Headline */}
         <div className="text-center mb-14">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-gray-dark">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-dark">
             Le talent de{" "}
             <span className="text-brand-dark">nos étudiants,</span>
             <br />
@@ -79,16 +80,12 @@ export default function NotreJuniorPage() {
         {/* Content grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Photo */}
-          <div className="relative rounded-3xl overflow-hidden aspect-[4/3]">
-            <AppImage
-              src="/assets/images/photo-mandat.jpeg"
-              alt="Membres de Palm Junior Conseil"
-              fill
-              className="object-cover object-top"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent" />
-          </div>
+          <div className="relative bg-gray-200 flex items-center justify-center aspect-[4/3] rounded-3xl">
+              <span className="text-sm text-gray-400 italic">
+                Illustration à venir
+              </span>
+              {/*<div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent rounded-3xl" />*/}
+            </div>
 
           {/* Text */}
           <div className="space-y-5 text-gray-dark leading-relaxed">
@@ -189,24 +186,8 @@ export default function NotreJuniorPage() {
           ))}
         </div>
 
-        {/* CTA bas de page */}
-        <div className="mt-16 text-center rounded-3xl p-10"
-          style={{ backgroundColor: "var(--color-gray-light)" }}
-        >
-          <p className="text-lg font-medium text-gray-dark mb-6">
-            Un projet en tête ? Nos équipes sont à votre écoute pour{" "}
-            <strong className="text-brand-dark">vous accompagner</strong>
-          </p>
-          <Link
-            href="/nous-contacter"
-            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold text-white no-underline transition-all hover:opacity-90"
-            style={{ backgroundColor: "var(--color-brand-dark)" }}
-          >
-            Contactez-nous
-          </Link>
-        </div>
       </section>
-
+      <CtaStrip />
     </main>
   );
 }

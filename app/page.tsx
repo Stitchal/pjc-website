@@ -4,6 +4,7 @@ import StudyProcessSection from "@/components/home/StudyProcessSection";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import CtaBanner from "@/components/home/CtaBanner";
 import PartnersSection from "@/components/home/PartnersSection";
+import CtaStrip from "@/components/CtaStrip";
 
 export default function HomePage() {
   return (
@@ -12,8 +13,8 @@ export default function HomePage() {
       <StudyProcessSection />
       <IntroCard />
       <ServicesGrid />
-      <CtaBanner />
       <PartnersSection />
+      <CtaStrip />
     </>
   );
 }

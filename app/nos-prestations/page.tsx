@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AppImage from "@/components/AppImage";
 import Link from "next/link";
+import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
   title: "Nos prestations",
@@ -84,7 +85,7 @@ export default function NosPrestation() {
     <main>
       {/* ── Hero ── */}
       <section className="section-wrapper py-16 text-center">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-dark leading-tight">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-dark leading-tight">
           Découvrez nos <span className="text-brand-dark">prestations</span>
         </h1>
         <div className="flex justify-center mt-3">
@@ -172,22 +173,7 @@ export default function NosPrestation() {
         );
       })}
 
-      {/* ── CTA ── */}
-      <section className="bg-gray-light py-16">
-        <div className="section-wrapper text-center">
-          <p className="text-lg font-medium text-gray-dark mb-6">
-            Un projet en tête ? Nos équipes sont à votre écoute pour{" "}
-            <strong className="text-brand-dark">vous accompagner</strong>
-          </p>
-          <Link
-            href="/nous-contacter"
-            className="inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold text-white no-underline transition-all hover:opacity-90 active:scale-[0.98]"
-            style={{ backgroundColor: "var(--color-brand-dark)" }}
-          >
-            Démarrer un projet
-          </Link>
-        </div>
-      </section>
+      <CtaStrip/>
     </main>
   );
 }

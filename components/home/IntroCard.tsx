@@ -26,7 +26,7 @@ export default function IntroCard() {
             {/* Photo placeholder */}
             <div className="bg-gray-200 flex items-center justify-center min-h-[280px]">
               <span className="text-sm text-gray-400 italic">
-                photo mandat
+                Illustration à venir
               </span>
             </div>
           </div>
