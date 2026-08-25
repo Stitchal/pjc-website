@@ -86,19 +86,19 @@ export default function HeroSection() {
             {...fadeUp(0.65)}
           >
             <Link
-              href="/nous-contacter"
+              href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Plaquette_PJC.pdf`}
               className="inline-flex items-center justify-center rounded-full bg-brand px-7 py-3.5 text-sm font-bold text-white no-underline transition-all hover:bg-brand-light hover:shadow-lg active:scale-95"
             >
-              Démarrer un projet
+              Notre plaquette commerciale
             </Link>
             <a
-              href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Plaquette_PJC.pdf`}
+              href="/nous-contacter"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-white px-7 py-3.5 text-sm font-bold no-underline transition-all hover:bg-white/90 hover:shadow-lg active:scale-95"
               style={{ color: "var(--color-brand-dark)" }}
             >
-              Notre plaquette commerciale
+              Démarrer un projet
             </a>
           </motion.div>
         </div>
