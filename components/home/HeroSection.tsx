@@ -2,7 +2,6 @@
 
 import AppImage from "@/components/AppImage";
 import Link from "next/link";
-import NavBar from "@/components/NavBar";
 import { motion, useReducedMotion } from "motion/react";
 
 const ease = [0.16, 1, 0.3, 1] as const;
@@ -19,18 +18,9 @@ export default function HeroSection() {
           transition: { duration: 0.8, delay, ease },
         };
 
-  const fadeDown = (delay: number) =>
-    reduce
-      ? {}
-      : {
-          initial: { opacity: 0, y: -16 },
-          animate: { opacity: 1, y: 0 },
-          transition: { duration: 0.7, delay, ease },
-        };
-
   return (
     <section
-      className="relative overflow-hidden text-white"
+      className="relative overflow-hidden text-white -mt-20"
       style={{ backgroundColor: "var(--color-brand-dark)", minHeight: "100svh" }}
     >
       {/* Background image — subtle zoom-in on load */}
@@ -51,15 +41,10 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/70 to-transparent" />
       </motion.div>
 
-      {/* Navbar — slides down */}
-      <motion.div className="relative z-50" {...fadeDown(0.1)}>
-        <NavBar variant="hero" />
-      </motion.div>
-
       {/* Hero content */}
       <div
         className="relative z-10 section-wrapper py-16 flex items-center"
-        style={{ minHeight: "calc(100svh - 80px)" }}
+        style={{ minHeight: "100svh" }}
       >
         <div className="max-w-2xl">
 
