@@ -97,7 +97,7 @@ export default function NotreJuniorPage() {
           {/* Text */}
           <div className="space-y-5 text-gray-dark leading-relaxed">
             <p>
-              Créée en 2025 en tant qu'association loi 1901,{" "}
+              Créée en 2026 en tant qu'association loi 1901,{" "}
               <strong className="text-brand-dark">Palm Junior Conseil</strong>{" "}
               représente les formations de l'Université Côte d'Azur basées sur le campus Georges Méliès à Cannes.
             </p>
