@@ -45,7 +45,7 @@ export default function CtaStrip() {
             Demander un devis gratuit
           </Link>
           <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Plaquette_PJC.pdf`}
+            href="/Plaquette_PJC.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-full border-2 border-white/40 px-7 py-3.5 text-sm font-bold text-white no-underline transition-all hover:border-white hover:bg-white/10 active:scale-95"

@@ -71,7 +71,7 @@ export default function HeroSection() {
             {...fadeUp(0.65)}
           >
             <Link
-              href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/Plaquette_PJC.pdf`}
+              href="/Plaquette_PJC.pdf"
               className="inline-flex items-center justify-center rounded-full bg-brand px-7 py-3.5 text-sm font-bold text-white no-underline transition-all hover:bg-brand-light hover:shadow-lg active:scale-95"
             >
               Notre plaquette commerciale
