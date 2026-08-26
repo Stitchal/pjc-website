@@ -36,7 +36,7 @@ const sections = [
     id: "conception",
     title: "Conception et développement",
     content: [
-      "Le site a été conçu et développé par Monsieur Alexis ROSSET.",
+      "Le site a été conçu et développé par Monsieur [Alexis ROSSET](https://www.linkedin.com/in/alexis-rosset06/).",
     ],
   },
   {
@@ -71,16 +71,13 @@ const sections = [
 ];
 
 function renderContent(text: string) {
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return parts.map((part, i) =>
-    i % 2 === 1 ? (
-      <strong key={i} className="font-semibold text-gray-dark">
-        {part}
-      </strong>
-    ) : (
-      part
-    )
-  );
+  return text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g).map((part, i) => {
+    const link = part.match(/^\[(.*?)\]\((.*?)\)$/);
+    if (link) return <a key={i} href={link[2]} target="_blank" rel="noopener noreferrer" className="text-brand-dark underline hover:text-brand">{link[1]}</a>;
+    const bold = part.match(/^\*\*(.*?)\*\*$/);
+    if (bold) return <strong key={i} className="font-semibold text-gray-dark">{bold[1]}</strong>;
+    return part;
+  });
 }
 
 export default function MentionsLegalesPage() {
