@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { MapPinIcon } from "@phosphor-icons/react/dist/ssr/MapPin";
 import { EnvelopeIcon } from "@phosphor-icons/react/dist/ssr/Envelope";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Nous contacter",
@@ -69,60 +70,7 @@ export default function NousContacterPage() {
             {/* ── Colonne droite — formulaire ── */}
             <div className="bg-white flex flex-col justify-center p-8 lg:p-12">
               <h2 className="text-xl font-bold text-brand-dark mb-8">Prise de contact</h2>
-
-              <form className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <Field id="prenom" label="Prénom" type="text" placeholder="Votre prénom" />
-                  <Field id="nom" label="Nom" type="text" placeholder="Votre nom" />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <Field id="email" label="Email" type="email" placeholder="votre@email.com" />
-                  <Field id="telephone" label="Téléphone" type="tel" placeholder="+33 6 00 00 00 00" />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-semibold text-gray-dark/60 uppercase tracking-wider mb-2" htmlFor="source">
-                    Comment nous avez-vous connus ?
-                  </label>
-                  <select
-                    id="source"
-                    defaultValue=""
-                    className="w-full border-0 border-b-2 border-gray-200 bg-transparent pb-2 text-sm text-gray-dark outline-none transition-colors focus:border-brand-dark appearance-none cursor-pointer"
-                  >
-                    <option value="" disabled>Sélectionnez une option</option>
-                    <option value="Recommandation">Recommandation</option>
-                    <option value="Recherche Google">Recherche Google</option>
-                    <option value="Réseaux sociaux">Réseaux sociaux</option>
-                    <option value="Via le campus Georges Méliès">Via le campus Georges Méliès</option>
-                    <option value="Événement / Salon">Événement / Salon</option>
-                    <option value="Ancien client">Ancien client</option>
-                    <option value="Autre">Autre</option>
-                  </select>
-                </div>
-
-                <Field id="sujet" label="Sujet" type="text" placeholder="Objet de votre demande" />
-
-                <div>
-                  <label className="block text-xs font-semibold text-gray-dark/60 uppercase tracking-wider mb-2" htmlFor="message">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    placeholder="Décrivez votre projet ou votre demande..."
-                    className="w-full border-0 border-b-2 border-gray-200 bg-transparent pb-2 text-sm text-gray-dark outline-none transition-colors focus:border-brand-dark resize-none placeholder:text-gray-400"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full rounded-full py-3.5 text-sm font-bold text-white transition-all hover:opacity-90 active:scale-[0.98]"
-                  style={{ backgroundColor: "var(--color-brand-dark)" }}
-                >
-                  Envoyer ma demande
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
           </div>
@@ -149,34 +97,5 @@ export default function NousContacterPage() {
         </div>
       </div>
     </>
-  );
-}
-
-function Field({
-  id,
-  label,
-  type,
-  placeholder,
-}: {
-  id: string;
-  label: string;
-  type: string;
-  placeholder: string;
-}) {
-  return (
-    <div>
-      <label
-        className="block text-xs font-semibold text-gray-dark/60 uppercase tracking-wider mb-2"
-        htmlFor={id}
-      >
-        {label}
-      </label>
-      <input
-        id={id}
-        type={type}
-        placeholder={placeholder}
-        className="w-full border-0 border-b-2 border-gray-200 bg-transparent pb-2 text-sm text-gray-dark outline-none transition-colors focus:border-brand-dark placeholder:text-gray-400"
-      />
-    </div>
   );
 }
