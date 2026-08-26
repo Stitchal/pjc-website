@@ -1,6 +1,6 @@
 # PJC Website
 
-Site vitrine de **Projet Junior Consulting**, junior-entreprise de l'école Georges Méliès. Développé avec Next.js, déployé sur GitHub Pages.
+Site vitrine de **PJC**, Junior Conseil de l'école Georges Méliès. Développé avec Next.js, déployé sur GitHub Pages.
 
 ## Stack
 
