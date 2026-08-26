@@ -122,13 +122,20 @@ export default function NosPrestation() {
               <div className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${!imageLeft ? "lg:[&>*:first-child]:order-2" : ""}`}>
 
                 {/* Image */}
-                <div className="relative rounded-2xl overflow-hidden aspect-[16/10] shadow-lg">
-                  <Image
-                    src={p.image}
-                    alt={p.title}
-                    fill
-                    className="object-cover"
-                  />
+                <div>
+                  <div className="relative rounded-2xl overflow-hidden aspect-[16/10] shadow-lg">
+                    <Image
+                      src={p.image}
+                      alt={p.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  {p.slug === "game-design" && (
+                    <p className="mt-2 text-xs text-center italic text-gray-dark/40">
+                      MATCHY MATCH&apos;IT - Jeu de société créé par Noélyne Jourdan &amp; Audrey Requier
+                    </p>
+                  )}
                 </div>
 
                 {/* Content */}
