@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AppImage from "@/components/AppImage";
+import Image from "next/image";
 import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
@@ -95,7 +95,7 @@ export default function NosPrestation() {
           Découvrez nos <span className="text-brand-dark">prestations</span>
         </h1>
         <div className="flex justify-center mt-3">
-          <AppImage
+          <Image
             src="/assets/icons/title-underline-bordeaux.png"
             alt=""
             width={420}
@@ -123,7 +123,7 @@ export default function NosPrestation() {
 
                 {/* Image */}
                 <div className="relative rounded-2xl overflow-hidden aspect-[16/10] shadow-lg">
-                  <AppImage
+                  <Image
                     src={p.image}
                     alt={p.title}
                     fill
@@ -139,7 +139,7 @@ export default function NosPrestation() {
                       className="h-12 w-12 rounded-xl flex items-center justify-center shrink-0"
                       style={{ backgroundColor: p.dark ? "rgba(255,255,255,0.15)" : "var(--color-brand-dark)" }}
                     >
-                      <AppImage
+                      <Image
                         src={p.dark ? p.iconWhite : p.iconWhite}
                         alt=""
                         width={28}

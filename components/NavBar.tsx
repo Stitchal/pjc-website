@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import AppImage from "@/components/AppImage";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ListIcon } from "@phosphor-icons/react/dist/ssr/List";
 import { XIcon } from "@phosphor-icons/react/dist/ssr/X";
@@ -31,7 +31,7 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
           className="shrink-0 no-underline"
           onClick={() => setMobileOpen(false)}
         >
-          <AppImage
+          <Image
             src={isHero ? "/assets/logos/cropped-logo-blanc.png" : "/assets/logos/cropped-logo-couleurs.png"}
             alt="Palm Junior Conseil"
             width={2536}
