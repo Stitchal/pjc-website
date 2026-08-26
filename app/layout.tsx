@@ -13,7 +13,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Palm Junior Conseil — Industries Culturelles et Créatives",
+    default: "Palm Junior Conseil | Industries Culturelles et Créatives",
     template: "%s | Palm Junior Conseil",
   },
   description:
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Palm Junior Conseil" }],
   openGraph: {
-    title: "Palm Junior Conseil — Industries Culturelles et Créatives",
+    title: "Palm Junior Conseil | Industries Culturelles et Créatives",
     description:
       "Innovez au cœur des Industries Culturelles et Créatives. Le talent de nos étudiants, au service de votre projet.",
     type: "website",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: "https://www.palmjuniorconseil.fr/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Palm Junior Conseil — Industries Culturelles et Créatives",
+        alt: "Palm Junior Conseil | Industries Culturelles et Créatives",
       },
     ],
   },
