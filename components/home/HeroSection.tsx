@@ -1,6 +1,6 @@
 "use client";
 
-import AppImage from "@/components/AppImage";
+import Image from "next/image";
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
 
@@ -30,7 +30,7 @@ export default function HeroSection() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1.6, ease }}
       >
-        <AppImage
+        <Image
           src="/assets/images/campus-hero.png"
           alt="Campus Georges Méliès"
           fill

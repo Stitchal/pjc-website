@@ -1,5 +1,5 @@
 import Link from "next/link";
-import AppImage from "@/components/AppImage";
+import Image from "next/image";
 import { MapPinIcon } from "@phosphor-icons/react/dist/ssr/MapPin";
 import { EnvelopeSimpleIcon } from "@phosphor-icons/react/dist/ssr/EnvelopeSimple";
 import { FaLinkedin, FaInstagram } from "react-icons/fa";
@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Column 1 — Logo & Branding */}
           <div>
             <Link href="/" className="inline-block group">
-              <AppImage
+              <Image
                 src="/assets/logos/logo-blanc.png"
                 alt="Palm Junior Conseil"
                 width={280}

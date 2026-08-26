@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import AppImage from "@/components/AppImage";
+import Image from "next/image";
 import Link from "next/link";
 import CtaStrip from "@/components/CtaStrip";
 
@@ -73,7 +73,7 @@ export default function NotreJuniorPage() {
             <span className="text-brand-dark">votre projet.</span>
           </h1>
           <div className="flex justify-center mt-3">
-            <AppImage
+            <Image
               src="/assets/icons/title-underline-bordeaux.png"
               alt=""
               width={420}
@@ -177,7 +177,7 @@ export default function NotreJuniorPage() {
                 className="h-14 w-14 rounded-2xl flex items-center justify-center"
                 style={{ backgroundColor: "var(--color-brand-dark)" }}
               >
-                <AppImage
+                <Image
                   src={item.icon}
                   alt={item.title}
                   width={36}
