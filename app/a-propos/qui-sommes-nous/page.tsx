@@ -87,22 +87,24 @@ export default function NotreJuniorPage() {
         {/* Content grid */}
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Photo */}
-          <div className="relative bg-gray-200 flex items-center justify-center aspect-[4/3] rounded-3xl">
-              <span className="text-sm text-gray-400 italic">
-                Illustration à venir
-              </span>
-              {/*<div className="absolute inset-0 bg-gradient-to-t from-brand-dark/30 to-transparent rounded-3xl" />*/}
-            </div>
+          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
+            <Image
+              src="/assets/images/qui-sommes-nous.jpg"
+              alt="L'équipe Palm Junior Conseil"
+              fill
+              className="object-cover"
+            />
+          </div>
 
           {/* Text */}
           <div className="space-y-5 text-gray-dark leading-relaxed">
             <p>
-              Créée en 2026 en tant qu'association loi 1901,{" "}
+              Créée en 2026 en tant qu&apos;association loi 1901,{" "}
               <strong className="text-brand-dark">Palm Junior Conseil</strong>{" "}
-              représente les formations de l'Université Côte d'Azur basées sur le campus Georges Méliès à Cannes.
+              représente les formations de l&apos;Université Côte d&apos;Azur basées sur le campus Georges Méliès à Cannes.
             </p>
             <p>
-              Au coeur d'un écosystème unique réunissant 1200 étudiants, chercheurs et professionnels, nous sommes la seule Junior du département spécialisée dans les Industries Culturelles et Créatives.
+              Au coeur d&apos;un écosystème unique réunissant 1200 étudiants, chercheurs et professionnels, nous sommes la seule Junior du département spécialisée dans les Industries Culturelles et Créatives.
             </p>
             <p>
               Grâce à cette{" "}
@@ -110,7 +112,7 @@ export default function NotreJuniorPage() {
               nos étudiants mettent toute leur créativité et leur expertise à votre service pour concrétiser vos projets avec des solutions sur-mesure et des tarifs attractifs.
             </p>
             <p className="text-sm text-gray-dark/70">
-              Les enseignements de notre école, à la pointe des dernières nouveautés en matière de recherche, grâce à l'accompagnement de nos professeurs-chercheurs et les équipements techniques de niveau professionnel mis à notre disposition, permettent à notre équipe de vous fournir les meilleures prestations.
+              Les enseignements de notre école, à la pointe des dernières nouveautés en matière de recherche, grâce à l&apos;accompagnement de nos professeurs-chercheurs et les équipements techniques de niveau professionnel mis à notre disposition, permettent à notre équipe de vous fournir les meilleures prestations.
             </p>
             <div className="pt-2">
               <a
@@ -136,9 +138,7 @@ export default function NotreJuniorPage() {
             Un processus structuré pour transformer votre vision en résultat concret.
           </p>
 
-          {/* Steps — horizontal scroll on mobile, row on desktop */}
           <div className="relative">
-            {/* Connecting line — desktop only */}
             <div
               className="hidden lg:block absolute top-6 left-0 right-0 h-px"
               style={{ backgroundColor: "var(--color-brand-dark)", opacity: 0.15 }}
@@ -147,7 +147,6 @@ export default function NotreJuniorPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
               {steps.map((step) => (
                 <div key={step.number} className="relative flex flex-col gap-3">
-                  {/* Number bubble */}
                   <div
                     className="relative z-10 h-12 w-12 rounded-full flex items-center justify-center text-sm font-bold text-white shrink-0"
                     style={{ backgroundColor: "var(--color-brand-dark)" }}
@@ -192,8 +191,8 @@ export default function NotreJuniorPage() {
             </div>
           ))}
         </div>
-
       </section>
+
       <CtaStrip />
     </main>
   );
