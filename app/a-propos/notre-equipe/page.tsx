@@ -23,9 +23,9 @@ type Member = {
 };
 
 const members: Member[] = [
-  { firstName: "Prénom", lastName: "Nom", role: "Présidente", image: null, linkedin: null },
-  { firstName: "Prénom", lastName: "Nom", role: "Trésorière", image: null, linkedin: null },
-  { firstName: "Prénom", lastName: "Nom", role: "Secrétaire générale", image: null, linkedin: null },
+  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: null, linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/" },
+  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: null, linkedin: "https://www.linkedin.com/in/audrey-requier/" },
+  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: null, linkedin: "https://www.linkedin.com/in/noelyne-jourdan/" },
 ];
 
 function MemberCard({ member }: { member: Member }) {
