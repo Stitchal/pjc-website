@@ -76,7 +76,7 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
             if (link.sublinks) {
               const dropdownOpen = openDropdown === link.href;
               return (
-                <div key={link.href} className="relative">
+                <div key={link.href} className="relative" onMouseEnter={() => setOpenDropdown(link.href)} onMouseLeave={() => setOpenDropdown(null)}>
                   <button
                     type="button"
                     onClick={() => setOpenDropdown(dropdownOpen ? null : link.href)}
@@ -100,33 +100,35 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
                   {/* Dropdown panel */}
                   {dropdownOpen && (
                     <div
-                      className={`absolute top-full mt-2 left-0 min-w-44 rounded-2xl overflow-hidden shadow-xl border z-50 ${
+                      className={`absolute top-full pt-2 left-0 min-w-44 z-50`}
+                    >
+                      <div className={`rounded-2xl overflow-hidden shadow-xl border ${
                         isHero
                           ? "bg-white/15 backdrop-blur-md border-white/20"
                           : "bg-white border-gray-100"
-                      }`}
-                    >
-                      <div className="flex flex-col p-1.5">
-                        {link.sublinks.map((sub) => {
-                          const subActive = pathname === sub.href;
-                          return (
-                            <Link
-                              key={sub.href}
-                              href={sub.href}
-                              className={`block rounded-xl px-4 py-2.5 text-sm font-semibold no-underline transition-colors ${
-                                subActive
-                                  ? isHero
-                                    ? "bg-white/20 text-white"
-                                    : "bg-brand-dark/8 text-brand-dark"
-                                  : isHero
-                                    ? "text-white/80 hover:bg-white/10 hover:text-white"
-                                    : "text-gray-dark hover:bg-gray-50 hover:text-brand-dark"
-                              }`}
-                            >
-                              {sub.label}
-                            </Link>
-                          );
-                        })}
+                      }`}>
+                        <div className="flex flex-col p-1.5">
+                          {link.sublinks.map((sub) => {
+                            const subActive = pathname === sub.href;
+                            return (
+                              <Link
+                                key={sub.href}
+                                href={sub.href}
+                                className={`block rounded-xl px-4 py-2.5 text-sm font-semibold no-underline transition-colors ${
+                                  subActive
+                                    ? isHero
+                                      ? "bg-white/20 text-white"
+                                      : "bg-brand-dark/8 text-brand-dark"
+                                    : isHero
+                                      ? "text-white/80 hover:bg-white/10 hover:text-white"
+                                      : "text-gray-dark hover:bg-gray-50 hover:text-brand-dark"
+                                }`}
+                              >
+                                {sub.label}
+                              </Link>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
                   )}
