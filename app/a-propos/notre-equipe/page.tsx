@@ -30,32 +30,38 @@ const members: Member[] = [
 
 function MemberCard({ member }: { member: Member }) {
   return (
-    <div className="flex items-center gap-4 bg-gray-light rounded-2xl p-4">
-      {/* Avatar */}
-      <div className="shrink-0 h-14 w-14 rounded-full overflow-hidden bg-gray-300" />
-
-      {/* Info */}
-      <div className="flex-1 min-w-0">
-        <p className="font-bold text-gray-dark text-sm leading-tight">
-          {member.firstName} {member.lastName}
-        </p>
-        <p className="text-xs text-gray-dark/55 mt-0.5">{member.role}</p>
+    <div className="flex flex-col gap-4">
+      {/* Photo */}
+      <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200">
+        {member.image && (
+          <Image
+            src={member.image}
+            alt={`${member.firstName} ${member.lastName}`}
+            fill
+            className="object-cover object-top"
+          />
+        )}
       </div>
 
-      {/* LinkedIn */}
-      <div className="shrink-0">
-        {member.linkedin ? (
+      {/* Infos */}
+      <div className="flex items-start justify-between gap-2">
+        <div>
+          <p className="font-bold text-gray-dark text-base leading-tight">
+            {member.firstName} {member.lastName}
+          </p>
+          <p className="text-sm text-gray-dark/55 mt-1">{member.role}</p>
+        </div>
+
+        {member.linkedin && (
           <a
             href={member.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`LinkedIn de ${member.firstName} ${member.lastName}`}
-            className="text-[#0A66C2] hover:opacity-80 transition-opacity"
+            className="text-[#0A66C2] hover:opacity-75 transition-opacity shrink-0 mt-0.5"
           >
             <FaLinkedin size={22} />
           </a>
-        ) : (
-          <FaLinkedin size={22} className="text-gray-300" aria-hidden="true" />
         )}
       </div>
     </div>
@@ -65,7 +71,6 @@ function MemberCard({ member }: { member: Member }) {
 export default function NotreEquipePage() {
   return (
     <main>
-      {/* ── En-tête ── */}
       <section className="section-wrapper py-16">
         <div className="text-center mb-14">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-dark">
@@ -84,8 +89,7 @@ export default function NotreEquipePage() {
           </div>
         </div>
 
-        {/* Cartes membres */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {members.map((member, i) => (
             <MemberCard key={i} member={member} />
           ))}
