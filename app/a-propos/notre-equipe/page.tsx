@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { FaLinkedin } from "react-icons/fa";
 import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
@@ -13,10 +14,58 @@ export const metadata: Metadata = {
   },
 };
 
+type Member = {
+  firstName: string;
+  lastName: string;
+  role: string;
+  image: string | null;
+  linkedin: string | null;
+};
+
+const members: Member[] = [
+  { firstName: "Prénom", lastName: "Nom", role: "Présidente", image: null, linkedin: null },
+  { firstName: "Prénom", lastName: "Nom", role: "Trésorière", image: null, linkedin: null },
+  { firstName: "Prénom", lastName: "Nom", role: "Secrétaire générale", image: null, linkedin: null },
+];
+
+function MemberCard({ member }: { member: Member }) {
+  return (
+    <div className="flex items-center gap-4 bg-gray-light rounded-2xl p-4">
+      {/* Avatar */}
+      <div className="shrink-0 h-14 w-14 rounded-full overflow-hidden bg-gray-300" />
+
+      {/* Info */}
+      <div className="flex-1 min-w-0">
+        <p className="font-bold text-gray-dark text-sm leading-tight">
+          {member.firstName} {member.lastName}
+        </p>
+        <p className="text-xs text-gray-dark/55 mt-0.5">{member.role}</p>
+      </div>
+
+      {/* LinkedIn */}
+      <div className="shrink-0">
+        {member.linkedin ? (
+          <a
+            href={member.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`LinkedIn de ${member.firstName} ${member.lastName}`}
+            className="text-[#0A66C2] hover:opacity-80 transition-opacity"
+          >
+            <FaLinkedin size={22} />
+          </a>
+        ) : (
+          <FaLinkedin size={22} className="text-gray-300" aria-hidden="true" />
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function NotreEquipePage() {
   return (
     <main>
-      {/* ── Section : En-tête ── */}
+      {/* ── En-tête ── */}
       <section className="section-wrapper py-16">
         <div className="text-center mb-14">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-gray-dark">
@@ -35,14 +84,11 @@ export default function NotreEquipePage() {
           </div>
         </div>
 
-        {/* Placeholder */}
-        <div className="flex flex-col items-center justify-center py-24 text-center gap-4 rounded-3xl border border-gray-200 bg-gray-light">
-          <p className="text-gray-dark/50 text-sm font-medium tracking-wider uppercase">
-            À venir
-          </p>
-          <p className="text-gray-dark/40 text-sm max-w-sm">
-            La présentation de l&apos;équipe sera bientôt disponible.
-          </p>
+        {/* Cartes membres */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          {members.map((member, i) => (
+            <MemberCard key={i} member={member} />
+          ))}
         </div>
       </section>
 
