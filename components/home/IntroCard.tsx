@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function IntroCard() {
   return (
     <section className="bg-gray-light py-16">
@@ -23,11 +25,14 @@ export default function IntroCard() {
               </p>
             </div>
 
-            {/* Photo placeholder */}
-            <div className="bg-gray-200 flex items-center justify-center min-h-[280px]">
-              <span className="text-sm text-gray-400 italic">
-                Illustration à venir
-              </span>
+            {/* Photo */}
+            <div className="relative min-h-[280px]">
+              <Image
+                src="/assets/images/intro-card.jpg"
+                alt="Étudiants Palm Junior Conseil"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
