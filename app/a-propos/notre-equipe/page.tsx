@@ -23,9 +23,9 @@ type Member = {
 };
 
 const members: Member[] = [
-  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: "/assets/images/ava-rosset.JPG", linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/" },
-  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: "/assets/images/audrey-requier.JPG", linkedin: "https://www.linkedin.com/in/audrey-requier/" },
-  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: "/assets/images/noelyne-jourdan.JPG", linkedin: "https://www.linkedin.com/in/noelyne-jourdan/" },
+  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: "/assets/images/ava-rosset.jpg", linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/" },
+  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: "/assets/images/audrey-requier.jpg", linkedin: "https://www.linkedin.com/in/audrey-requier/" },
+  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: "/assets/images/noelyne-jourdan.jpg", linkedin: "https://www.linkedin.com/in/noelyne-jourdan/" },
 ];
 
 function MemberCard({ member }: { member: Member }) {

@@ -43,7 +43,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:palmjuniorconseil@gmail.com"
-                  className="flex items-center gap-2 transition-colors duration-200 hover:text-white"
+                  className="flex items-center gap-2 transition-colors duration-200 hover:text-white break-words min-w-0"
                 >
                   <EnvelopeSimpleIcon className="h-4 w-4 shrink-0 text-brand-light" />
                   palmjuniorconseil@gmail.com
@@ -62,6 +62,13 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link href={link.href} className="transition-colors duration-200 hover:text-white">
                     {link.label}
+                  </Link>
+                </li>
+              ))}
+              {NAV_LINKS.flatMap((link) => link.sublinks ?? []).map((sub) => (
+                <li key={sub.href}>
+                  <Link href={sub.href} className="transition-colors duration-200 hover:text-white">
+                    {sub.label}
                   </Link>
                 </li>
               ))}
