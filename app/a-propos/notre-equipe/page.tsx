@@ -23,22 +23,22 @@ type Member = {
 };
 
 const members: Member[] = [
-  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: null, linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/" },
-  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: null, linkedin: "https://www.linkedin.com/in/audrey-requier/" },
-  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: null, linkedin: "https://www.linkedin.com/in/noelyne-jourdan/" },
+  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: "/assets/images/ava-rosset.JPG", linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/" },
+  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: "/assets/images/audrey-requier.JPG", linkedin: "https://www.linkedin.com/in/audrey-requier/" },
+  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: "/assets/images/noelyne-jourdan.JPG", linkedin: "https://www.linkedin.com/in/noelyne-jourdan/" },
 ];
 
 function MemberCard({ member }: { member: Member }) {
   return (
     <div className="flex flex-col gap-4">
       {/* Photo */}
-      <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-gray-200">
+      <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-gray-200">
         {member.image && (
           <Image
             src={member.image}
             alt={`${member.firstName} ${member.lastName}`}
             fill
-            className="object-cover object-top"
+            className="object-cover object-center"
           />
         )}
       </div>
