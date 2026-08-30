@@ -28,7 +28,7 @@ export default function IntroCard() {
             {/* Photo */}
             <div className="relative min-h-[280px]">
               <Image
-                src="/assets/images/intro-card.JPG"
+                src="/assets/images/intro-card.jpg"
                 alt="Étudiants Palm Junior Conseil"
                 fill
                 className="object-cover"

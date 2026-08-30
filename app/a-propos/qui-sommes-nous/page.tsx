@@ -89,7 +89,7 @@ export default function NotreJuniorPage() {
           {/* Photo */}
           <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
             <Image
-              src="/assets/images/qui-sommes-nous.JPG"
+              src="/assets/images/qui-sommes-nous.jpg"
               alt="L'équipe Palm Junior Conseil"
               fill
               className="object-cover"
