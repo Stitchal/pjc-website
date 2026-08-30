@@ -114,7 +114,7 @@ export default function NavBar({ variant = "page" }: NavBarProps) {
                               <Link
                                 key={sub.href}
                                 href={sub.href}
-                                className={`block rounded-xl px-4 py-2.5 text-sm font-semibold no-underline transition-colors ${
+                                className={`block rounded-xl px-4 py-2.5 text-sm font-semibold no-underline transition-colors whitespace-nowrap ${
                                   subActive
                                     ? isHero
                                       ? "bg-white/20 text-white"
