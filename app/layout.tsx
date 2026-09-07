@@ -60,7 +60,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     name: "Palm Junior Conseil",
     alternateName: "PJC",
     url: "https://www.palmjuniorconseil.fr",
-    email: "palmjuniorconseil@gmail.com",
+    email: "contact@palmjuniorconseil.fr",
     description:
       "Association étudiante loi 1901 spécialisée dans les Industries Culturelles et Créatives, basée sur le Campus Georges Méliès à Cannes.",
     address: {

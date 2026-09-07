@@ -57,10 +57,10 @@ export default function NousContacterPage() {
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-white/40 mb-1">Email</p>
                     <a
-                      href="mailto:palmjuniorconseil@gmail.com"
+                      href="mailto:contact@palmjuniorconseil.fr"
                       className="text-white/80 hover:text-white text-sm transition-colors"
                     >
-                      palmjuniorconseil@gmail.com
+                      contact@palmjuniorconseil.fr
                     </a>
                   </div>
                 </div>

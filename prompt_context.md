@@ -5,7 +5,7 @@
 - **Type:** Junior-Entreprise (Association loi 1901) spécialisée dans les Industries Culturelles et Créatives (ICC)[cite: 1, 3].
 - **Tagline:** "Innovez au cœur des Industries Culturelles et Créatives"[cite: 1] / "Le talent de nos étudiants, au service de votre projet."[cite: 3]
 - **Location:** Campus Georges Méliès, 214 avenue Francis Tonner, 06150 Cannes La Bocca[cite: 1, 2, 3, 4].
-- **Email:** palmjuniorconseil@gmail.com[cite: 1, 2, 3, 4]
+- **Email:** contact@palmjuniorconseil.fr[cite: 1, 2, 3, 4]
 - **Goal:** Showcase the Junior-Enterprise, detail its 5 core services, present the methodology, and convert visitors into contact requests[cite: 1, 2, 3, 4].
 
 ---
@@ -49,7 +49,7 @@
 - **Column 1 (Logo & Branding):** Palm Junior Conseil logo[cite: 1, 2, 3, 4].
 - **Column 2 (Coordonnées):**
   - Campus Georges Méliès, 214 avenue Francis Tonner, 06150 Cannes La Bocca[cite: 1, 2, 3, 4]
-  - `palmjuniorconseil@gmail.com`[cite: 1, 2, 3, 4]
+  - `contact@palmjuniorconseil.fr`[cite: 1, 2, 3, 4]
 - **Column 3 (Nous suivre):**
   - LinkedIn icon link[cite: 1, 2, 3, 4]
   - Instagram icon link[cite: 1, 2, 3, 4]
