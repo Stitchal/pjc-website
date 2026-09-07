@@ -18,7 +18,7 @@ const sections = [
       "**Siège social :** 214 avenue Francis Tonner, 06150 Cannes La Bocca",
       "**SIRET :** 10892947200018",
       "**APE :** 94.99Z",
-      "**Adresse électronique :** palmjuniorconseil@gmail.com",
+      "**Adresse électronique :** contact@palmjuniorconseil.fr",
       "**Site internet :** www.palmjuniorconseil.fr",
       "**Responsable de la publication :** Madame Ava ROSSET, en sa qualité de Présidente de l'association.",
     ],
@@ -64,7 +64,7 @@ const sections = [
     id: "contact",
     title: "Informations de contact",
     content: [
-      "**Email :** palmjuniorconseil@gmail.com",
+      "**Email :** contact@palmjuniorconseil.fr",
       "**Adresse :** Campus Georges Méliès, 214 avenue Francis Tonner, 06150 Cannes La Bocca",
     ],
   },

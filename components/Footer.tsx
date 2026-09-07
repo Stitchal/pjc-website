@@ -42,11 +42,11 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:palmjuniorconseil@gmail.com"
+                  href="mailto:contact@palmjuniorconseil.fr"
                   className="flex items-center gap-2 transition-colors duration-200 hover:text-white break-words min-w-0"
                 >
                   <EnvelopeSimpleIcon className="h-4 w-4 shrink-0 text-brand-light" />
-                  palmjuniorconseil@gmail.com
+                  contact@palmjuniorconseil.fr
                 </a>
               </li>
             </ul>

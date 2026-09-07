@@ -15,7 +15,7 @@ const sections = [
       "Le responsable du traitement des données personnelles collectées sur ce site est :",
       "**Palm Junior Conseil (PJC)**",
       "**Adresse :** 214 avenue Francis Tonner, 06150 Cannes La Bocca",
-      "**Email :** palmjuniorconseil@gmail.com",
+      "**Email :** contact@palmjuniorconseil.fr",
     ],
   },
   {
@@ -50,7 +50,7 @@ const sections = [
     id: "droits",
     title: "Droits des utilisateurs",
     content: [
-      "Conformément au RGPD, les utilisateurs disposent d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de leurs données. Pour exercer ces droits, ils peuvent envoyer un email à palmjuniorconseil@gmail.com.",
+      "Conformément au RGPD, les utilisateurs disposent d'un droit d'accès, de rectification, d'effacement et de limitation du traitement de leurs données. Pour exercer ces droits, ils peuvent envoyer un email à contact@palmjuniorconseil.fr.",
     ],
   },
   {
