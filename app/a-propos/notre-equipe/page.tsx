@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 import CtaStrip from "@/components/CtaStrip";
 
 export const metadata: Metadata = {
@@ -20,12 +20,13 @@ type Member = {
   role: string;
   image: string | null;
   linkedin: string | null;
+  email: string | null;
 };
 
 const members: Member[] = [
-  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: "/assets/images/ava-rosset.jpg", linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/" },
-  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: "/assets/images/audrey-requier.jpg", linkedin: "https://www.linkedin.com/in/audrey-requier/" },
-  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: "/assets/images/noelyne-jourdan.jpg", linkedin: "https://www.linkedin.com/in/noelyne-jourdan/" },
+  { firstName: "Ava", lastName: "ROSSET", role: "Présidente", image: "/assets/images/ava-rosset.jpg", linkedin: "https://www.linkedin.com/in/ava-rosset-897a71257/", email: "ava.rosset@palmjuniorconseil.fr" },
+  { firstName: "Audrey", lastName: "REQUIER", role: "Trésorière", image: "/assets/images/audrey-requier.jpg", linkedin: "https://www.linkedin.com/in/audrey-requier/", email: "audrey.requier@palmjuniorconseil.fr" },
+  { firstName: "Noélyne", lastName: "JOURDAN", role: "Secrétaire générale", image: "/assets/images/noelyne-jourdan.jpg", linkedin: "https://www.linkedin.com/in/noelyne-jourdan/", email: "noelyne.jourdan@palmjuniorconseil.fr" },
 ];
 
 function MemberCard({ member }: { member: Member }) {
@@ -52,17 +53,28 @@ function MemberCard({ member }: { member: Member }) {
           <p className="text-sm text-gray-dark/55 mt-1">{member.role}</p>
         </div>
 
-        {member.linkedin && (
-          <a
-            href={member.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`LinkedIn de ${member.firstName} ${member.lastName}`}
-            className="text-[#0A66C2] hover:opacity-75 transition-opacity shrink-0 mt-0.5"
-          >
-            <FaLinkedin size={22} />
-          </a>
-        )}
+        <div className="flex items-center gap-2 shrink-0 mt-0.5">
+          {member.email && (
+            <a
+              href={`mailto:${member.email}`}
+              aria-label={`Email de ${member.firstName} ${member.lastName}`}
+              className="text-brand hover:opacity-75 transition-opacity"
+            >
+              <FaEnvelope size={20} />
+            </a>
+          )}
+          {member.linkedin && (
+            <a
+              href={member.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`LinkedIn de ${member.firstName} ${member.lastName}`}
+              className="text-[#0A66C2] hover:opacity-75 transition-opacity"
+            >
+              <FaLinkedin size={22} />
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
